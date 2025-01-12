@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -13,20 +13,39 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <button data-modal-target="#modal"> Open Modal </button> 
-
-        <div class="modal" id="modal">
-            <div class="modal-header"> 
-                <div class="title"> Example Modal </div>
-                <button data-close-button class="close-button"> &times; </button>
+        <div>
+            <button data-modal-target="#modal" id="open-modal"> Open Modal </button>
+            <button data-create-modal class="create-modal"> Create New Modal </button>
+    
+            <div class="modal" id="modal">
+                <div class="modal-header"> 
+                    <textarea class="title" maxlength="20"> Example Modal </textarea>
+                    <button data-close-button class="close-button"> &times; </button>
+                </div>
+                <div class="modal-body">
+                    <h3>Description</h3>
+                    <textarea class="description" placeholder=" Example text"></textarea>
+                    <div class="button-wrapper">
+                        <button class="save-button"> Save </button>
+                        <button class="cancel-button"> Cancel </button>
+                    </div>
+                </div>
+                <div class="modal-attachments-header">
+                    <div class="attachments-wrapper">
+                        <h3>Attachments</h3>
+                        <button class="add-button"> Add </button>
+                    </div>
+                    <div class="links">
+                        <h4>links</h4>
+                    </div>
+                </div>
+                <!-- If you add an attachment, show modal links -->
+                <div class="modal-comments"> </div>
             </div>
-            <div class="modal-body"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde debitis nam ut delectus, esse, deleniti laboriosam, quas neque accusantium explicabo veniam natus consequatur voluptates maiores. Dolorum deserunt corporis reprehenderit asperiores. </div>
-            <div class="modal-attachments"> </div>
-            <div class="modal-comments"> </div>
+    
+            <div id="overlay"></div>
         </div>
-
-        <div id="overlay"></div>
-        
+      
         <script src="app.js" async defer></script>
     </body>
 </html>

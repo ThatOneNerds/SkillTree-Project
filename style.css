@@ -26,11 +26,20 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .modal-header .title {
     font-size: 1.25rem;
     font-weight: bold;
+    height: 33px;
+    width: 100%;
+    resize: none;
+    background-color: #212529;
+    color: #adb5bd;
+    font-family: Tahoma, sans-serif;
+    border: none;
+    border-radius: 4px;
 }
 
 .modal-header .close-button {
@@ -42,9 +51,27 @@
     font-weight: bold;
 }
 
+
 .modal-body {
     padding: 10px 15px;
+    display: flex;
+    flex-direction: column;
 }
+
+.modal-body .description {
+    height: 32;
+    width: auto;
+    outline: none;
+    resize: none;
+}
+
+.modal-body .button-wrapper button {
+    font-family: Tahoma, sans-serif;
+    font-size: .90rem;
+    border: 0;
+    cursor: pointer;
+}
+
 
 #overlay {
     position: fixed;
@@ -61,3 +88,8 @@
     opacity: 1;
     pointer-events: all;
 }
+
+.modal-attachments-header .links{
+    display: flex;
+}
+
